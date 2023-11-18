@@ -1,0 +1,2 @@
+GET http://localhost:8080/api/vacina
+Content-Type: application/application/json
