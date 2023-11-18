@@ -14,14 +14,14 @@ import com.fiap.gs.repository.VacinaRepository;
 @RestController
 @RequestMapping("/api/vacina")
 public class VacinaController {
-	
+
 	@Autowired
 	VacinaRepository repository;
-	
+
 	@GetMapping()
 	public ResponseEntity<List<Vacina>> list() {
 		List<Vacina> vacinas = repository.findAll();
-		
+
 		return ResponseEntity.ok(vacinas);
 	}
 
