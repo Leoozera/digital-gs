@@ -1,5 +1,7 @@
 package com.fiap.gs.models;
 
+import java.util.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -33,6 +35,49 @@ public class Aviso {
     @ManyToOne
     @NotNull
     private Vacina vacina;
+    
+    @NotNull
+    private Date data;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
+	public Dependente getDependente() {
+		return dependente;
+	}
+
+	public void setDependente(Dependente dependente) {
+		this.dependente = dependente;
+	}
+
+	public Vacina getVacina() {
+		return vacina;
+	}
+
+	public void setVacina(Vacina vacina) {
+		this.vacina = vacina;
+	}
+
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
+	}
     
     
     

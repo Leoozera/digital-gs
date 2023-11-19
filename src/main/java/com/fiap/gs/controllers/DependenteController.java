@@ -1,13 +1,9 @@
 package com.fiap.gs.controllers;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.hateoas.PagedModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -27,10 +23,10 @@ import com.fiap.gs.exception.RestNotAuthorized;
 import com.fiap.gs.exception.RestNotFoundException;
 import com.fiap.gs.exception.RestNotValidBodyException;
 import com.fiap.gs.models.Dependente;
-import com.fiap.gs.models.SituacaoUsuario;
 import com.fiap.gs.models.Usuario;
 import com.fiap.gs.repository.DependentesRepository;
 import com.fiap.gs.repository.UsuarioRepository;
+import com.fiap.gs.service.AvisoService;
 import com.fiap.gs.service.TokenService;
 
 import jakarta.validation.Valid;
@@ -54,6 +50,9 @@ public class DependenteController {
 	@Autowired
 	TokenService tokenService;
 
+	@Autowired
+	AvisoService avisoService;
+	
 	@PostMapping("/cadastrar")
 	public ResponseEntity<Dependente> registrar(@RequestBody @Valid Dependente dependente) {
 
@@ -65,6 +64,8 @@ public class DependenteController {
 
 		dependente.setUsuario(usuario);
 		repository.save(dependente);
+		
+		avisoService.geradorDeAvisos(dependente);
 
 		return ResponseEntity.status(HttpStatus.CREATED).body(dependente);
 	}
