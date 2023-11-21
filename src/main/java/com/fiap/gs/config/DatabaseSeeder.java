@@ -62,8 +62,6 @@ public class DatabaseSeeder implements CommandLineRunner {
 		vacinaRepository.save(vacina);
 		vacinaRepository.save(vacina2);
 		vacinaRepository.save(vacina3);
-		
-		
 	}
 	
 	
