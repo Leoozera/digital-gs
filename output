@@ -7,41 +7,542 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.5)
 
-2023-11-21T04:09:41.033-03:00  INFO 28920 --- [  restartedMain] com.fiap.gs.GsApplication                : Starting GsApplication using Java 17.0.9 with PID 28920 (/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes started by leonardkaric in /Users/leonardkaric/eclipse-workspace/digital-gs)
-2023-11-21T04:09:41.036-03:00  INFO 28920 --- [  restartedMain] com.fiap.gs.GsApplication                : The following 1 profile is active: "prod"
-2023-11-21T04:09:41.070-03:00  INFO 28920 --- [  restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/leonardkaric/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.7.0.0/ojdbc8-21.7.0.0.jar referenced one or more files that do not exist: file:/Users/leonardkaric/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.7.0.0/oraclepki.jar
-2023-11-21T04:09:41.071-03:00  INFO 28920 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-21T04:09:41.071-03:00  INFO 28920 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-21T04:09:41.602-03:00  INFO 28920 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-21T04:09:41.641-03:00  INFO 28920 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 4 JPA repository interfaces.
-2023-11-21T04:09:42.153-03:00  INFO 28920 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-21T04:09:42.161-03:00  INFO 28920 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-21T04:09:42.161-03:00  INFO 28920 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
-2023-11-21T04:09:42.203-03:00  INFO 28920 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-21T04:09:42.204-03:00  INFO 28920 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1132 ms
-2023-11-21T04:09:42.254-03:00  INFO 28920 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-21T04:09:43.944-03:00  INFO 28920 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 327faa0e-2f96-47b7-b888-c4f379dd23d9
-2023-11-21T04:09:43.945-03:00  INFO 28920 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-21T04:09:43.955-03:00  INFO 28920 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:sqlserver://sqlserver-vacina-facil.database.windows.net:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;msiTokenCacheTtl=3600;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=sql-vacina-facil;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;'
-2023-11-21T04:09:44.013-03:00  INFO 28920 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-21T04:09:44.046-03:00  INFO 28920 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-11-21T04:09:44.200-03:00  INFO 28920 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
-2023-11-21T04:09:47.310-03:00  INFO 28920 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-21T04:09:47.323-03:00  INFO 28920 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-21T04:09:47.635-03:00  WARN 28920 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-21T04:09:47.815-03:00  INFO 28920 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1eac619d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2226623c, org.springframework.security.web.context.SecurityContextHolderFilter@3b4f976c, org.springframework.security.web.header.HeaderWriterFilter@2ab6a5eb, org.springframework.web.filter.CorsFilter@759aade4, org.springframework.security.web.authentication.logout.LogoutFilter@5340f7b3, com.fiap.gs.config.AuthorizationFilter@70557daa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d0446f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2054dc4b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@369e672a, org.springframework.security.web.session.SessionManagementFilter@55d7b1d, org.springframework.security.web.access.ExceptionTranslationFilter@2b0a9dab, org.springframework.security.web.access.intercept.AuthorizationFilter@1984b652]
-2023-11-21T04:09:47.919-03:00  WARN 28920 --- [  restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2023-11-21T04:09:47.919-03:00  INFO 28920 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/h2-console/**']
-2023-11-21T04:09:47.938-03:00  INFO 28920 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-21T04:09:47.960-03:00  INFO 28920 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-21T04:09:47.967-03:00  INFO 28920 --- [  restartedMain] com.fiap.gs.GsApplication                : Started GsApplication in 7.192 seconds (process running for 7.712)
-2023-11-21T04:13:43.053-03:00  WARN 28920 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m24s267ms).
-2023-11-21T04:14:51.236-03:00  WARN 28920 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s186ms).
-2023-11-21T04:17:01.101-03:00  WARN 28920 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m39s855ms).
-2023-11-21T04:19:09.656-03:00  WARN 28920 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s8ms).
-2023-11-21T04:20:08.126-03:00  WARN 28920 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s470ms).
-2023-11-21T05:19:51.956-03:00  WARN 28920 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59m13s818ms).
-2023-11-21T06:12:00.594-03:00  WARN 28920 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51m38s617ms).
-2023-11-21T07:12:43.524-03:00  WARN 28920 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h42s930ms).
-2023-11-21T08:13:55.319-03:00  WARN 28920 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h41s810ms).
-2023-11-21T08:30:36.095-03:00  WARN 28920 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m40s776ms).
+2023-11-21T09:12:44.851-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Starting GsApplication using Java 17.0.9 with PID 30484 (/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes started by leonardkaric in /Users/leonardkaric/eclipse-workspace/digital-gs)
+2023-11-21T09:12:44.854-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : The following 1 profile is active: "prod"
+2023-11-21T09:12:44.883-03:00  INFO 30484 --- [  restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/leonardkaric/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.7.0.0/ojdbc8-21.7.0.0.jar referenced one or more files that do not exist: file:/Users/leonardkaric/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.7.0.0/oraclepki.jar
+2023-11-21T09:12:44.883-03:00  INFO 30484 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-21T09:12:44.883-03:00  INFO 30484 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-21T09:12:45.310-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T09:12:45.344-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 4 JPA repository interfaces.
+2023-11-21T09:12:45.870-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-21T09:12:45.881-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T09:12:45.881-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-11-21T09:12:45.927-03:00  INFO 30484 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T09:12:45.928-03:00  INFO 30484 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1043 ms
+2023-11-21T09:12:45.974-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21T09:12:48.092-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 21eb967f-2356-4abe-b6da-b79e1f0ce8b5
+2023-11-21T09:12:48.094-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21T09:12:48.105-03:00  INFO 30484 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:sqlserver://sqlserver-vacina-facil.database.windows.net:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;msiTokenCacheTtl=3600;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=sql-vacina-facil;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;'
+2023-11-21T09:12:48.182-03:00  INFO 30484 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T09:12:48.220-03:00  INFO 30484 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-11-21T09:12:48.392-03:00  INFO 30484 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2023-11-21T09:12:51.736-03:00  INFO 30484 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T09:12:51.756-03:00  INFO 30484 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:12:52.065-03:00  WARN 30484 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T09:12:52.245-03:00  INFO 30484 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19f87686, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f9733bb, org.springframework.security.web.context.SecurityContextHolderFilter@5e085f49, org.springframework.security.web.header.HeaderWriterFilter@7e4ca6de, org.springframework.web.filter.CorsFilter@1b187c27, org.springframework.security.web.authentication.logout.LogoutFilter@6ba3ba20, com.fiap.gs.config.AuthorizationFilter@50794f07, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@408fc820, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1eac619d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@913d202, org.springframework.security.web.session.SessionManagementFilter@16a9c53, org.springframework.security.web.access.ExceptionTranslationFilter@1f969642, org.springframework.security.web.access.intercept.AuthorizationFilter@9f5e78d]
+2023-11-21T09:12:52.345-03:00  WARN 30484 --- [  restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-11-21T09:12:52.345-03:00  INFO 30484 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/h2-console/**']
+2023-11-21T09:12:52.362-03:00  INFO 30484 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-21T09:12:52.384-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-21T09:12:52.391-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Started GsApplication in 7.772 seconds (process running for 8.244)
+2023-11-21T09:14:22.350-03:00  INFO 30484 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T09:14:22.350-03:00  INFO 30484 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21T09:14:22.352-03:00  INFO 30484 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-21T09:17:43.975-03:00  INFO 30484 --- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-21T09:17:44.014-03:00  INFO 30484 --- [       Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T09:17:44.018-03:00  INFO 30484 --- [       Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-21T09:17:44.035-03:00  INFO 30484 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:17:44.044-03:00  INFO 30484 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21T09:17:44.054-03:00  INFO 30484 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-11-21T09:17:44.140-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Starting GsApplication using Java 17.0.9 with PID 30484 (/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes started by leonardkaric in /Users/leonardkaric/eclipse-workspace/digital-gs)
+2023-11-21T09:17:44.140-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : The following 1 profile is active: "prod"
+2023-11-21T09:17:44.282-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T09:17:44.294-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+2023-11-21T09:17:44.368-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-21T09:17:44.369-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T09:17:44.369-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-11-21T09:17:44.379-03:00  INFO 30484 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T09:17:44.379-03:00  INFO 30484 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 238 ms
+2023-11-21T09:17:44.389-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-11-21T09:17:45.736-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection ConnectionID:11 ClientConnectionId: 8ba3b2a8-ab27-4d2d-b855-7198d06e2bc0
+2023-11-21T09:17:45.736-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-11-21T09:17:45.736-03:00  INFO 30484 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:sqlserver://sqlserver-vacina-facil.database.windows.net:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;msiTokenCacheTtl=3600;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=sql-vacina-facil;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;'
+2023-11-21T09:17:45.751-03:00  INFO 30484 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T09:17:45.754-03:00  INFO 30484 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2023-11-21T09:17:48.042-03:00  INFO 30484 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T09:17:48.047-03:00  INFO 30484 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:17:48.179-03:00  WARN 30484 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dependenteController': Unsatisfied dependency expressed through field 'avisoService': Error creating bean with name 'avisoService' defined in file [/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes/com/fiap/gs/service/AvisoService.class]: Failed to instantiate [com.fiap.gs.service.AvisoService]: Constructor threw exception
+2023-11-21T09:17:48.180-03:00  INFO 30484 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:17:48.180-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-11-21T09:17:48.182-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-11-21T09:17:48.182-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T09:17:48.187-03:00  INFO 30484 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-21T09:17:48.198-03:00 ERROR 30484 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dependenteController': Unsatisfied dependency expressed through field 'avisoService': Error creating bean with name 'avisoService' defined in file [/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes/com/fiap/gs/service/AvisoService.class]: Failed to instantiate [com.fiap.gs.service.AvisoService]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
+	at com.fiap.gs.GsApplication.main(GsApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.5.jar:3.0.5]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'avisoService' defined in file [/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes/com/fiap/gs/service/AvisoService.class]: Failed to instantiate [com.fiap.gs.service.AvisoService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fiap.gs.service.AvisoService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 36 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Local variable contadora defined in an enclosing scope must be final or effectively final
+
+	at com.fiap.gs.service.AvisoService.<init>(AvisoService.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:198) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 38 common frames omitted
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-11-21T09:17:54.804-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Starting GsApplication using Java 17.0.9 with PID 30484 (/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes started by leonardkaric in /Users/leonardkaric/eclipse-workspace/digital-gs)
+2023-11-21T09:17:54.804-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : The following 1 profile is active: "prod"
+2023-11-21T09:17:54.911-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T09:17:54.920-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 4 JPA repository interfaces.
+2023-11-21T09:17:54.976-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-21T09:17:54.977-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T09:17:54.977-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-11-21T09:17:54.986-03:00  INFO 30484 --- [  restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-21T09:17:54.986-03:00  INFO 30484 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 180 ms
+2023-11-21T09:17:54.991-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-11-21T09:17:55.879-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection ConnectionID:15 ClientConnectionId: 46c5f09b-8caf-452e-a19b-6bc999fc3f99
+2023-11-21T09:17:55.880-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-11-21T09:17:55.881-03:00  INFO 30484 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:sqlserver://sqlserver-vacina-facil.database.windows.net:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;msiTokenCacheTtl=3600;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=sql-vacina-facil;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;'
+2023-11-21T09:17:55.908-03:00  INFO 30484 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T09:17:55.912-03:00  INFO 30484 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2023-11-21T09:17:58.162-03:00  INFO 30484 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T09:17:58.163-03:00  INFO 30484 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:17:58.231-03:00  WARN 30484 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dependenteController': Unsatisfied dependency expressed through field 'avisoService': Error creating bean with name 'avisoService' defined in file [/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes/com/fiap/gs/service/AvisoService.class]: Failed to instantiate [com.fiap.gs.service.AvisoService]: Constructor threw exception
+2023-11-21T09:17:58.231-03:00  INFO 30484 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:17:58.231-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-11-21T09:17:58.235-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-11-21T09:17:58.236-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T09:17:58.239-03:00  INFO 30484 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-21T09:17:58.240-03:00 ERROR 30484 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dependenteController': Unsatisfied dependency expressed through field 'avisoService': Error creating bean with name 'avisoService' defined in file [/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes/com/fiap/gs/service/AvisoService.class]: Failed to instantiate [com.fiap.gs.service.AvisoService]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
+	at com.fiap.gs.GsApplication.main(GsApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.5.jar:3.0.5]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'avisoService' defined in file [/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes/com/fiap/gs/service/AvisoService.class]: Failed to instantiate [com.fiap.gs.service.AvisoService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fiap.gs.service.AvisoService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 36 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Local variable contadora defined in an enclosing scope must be final or effectively final
+
+	at com.fiap.gs.service.AvisoService.<init>(AvisoService.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:198) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 38 common frames omitted
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-11-21T09:18:49.243-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Starting GsApplication using Java 17.0.9 with PID 30484 (/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes started by leonardkaric in /Users/leonardkaric/eclipse-workspace/digital-gs)
+2023-11-21T09:18:49.243-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : The following 1 profile is active: "prod"
+2023-11-21T09:18:49.334-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T09:18:49.344-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 4 JPA repository interfaces.
+2023-11-21T09:18:49.410-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-21T09:18:49.410-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T09:18:49.410-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-11-21T09:18:49.419-03:00  INFO 30484 --- [  restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-21T09:18:49.419-03:00  INFO 30484 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 174 ms
+2023-11-21T09:18:49.424-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-11-21T09:18:50.366-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection ConnectionID:19 ClientConnectionId: d4bb312d-00d2-4af3-963e-facb18e01096
+2023-11-21T09:18:50.367-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-11-21T09:18:50.367-03:00  INFO 30484 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:sqlserver://sqlserver-vacina-facil.database.windows.net:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;msiTokenCacheTtl=3600;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=sql-vacina-facil;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;'
+2023-11-21T09:18:50.394-03:00  INFO 30484 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T09:18:50.399-03:00  INFO 30484 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2023-11-21T09:18:52.654-03:00  INFO 30484 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T09:18:52.655-03:00  INFO 30484 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:18:52.717-03:00  WARN 30484 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dependenteController': Unsatisfied dependency expressed through field 'avisoService': Error creating bean with name 'avisoService' defined in file [/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes/com/fiap/gs/service/AvisoService.class]: Failed to instantiate [com.fiap.gs.service.AvisoService]: Constructor threw exception
+2023-11-21T09:18:52.718-03:00  INFO 30484 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:18:52.718-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-11-21T09:18:53.440-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-11-21T09:18:53.441-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T09:18:53.449-03:00  INFO 30484 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-21T09:18:53.452-03:00 ERROR 30484 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dependenteController': Unsatisfied dependency expressed through field 'avisoService': Error creating bean with name 'avisoService' defined in file [/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes/com/fiap/gs/service/AvisoService.class]: Failed to instantiate [com.fiap.gs.service.AvisoService]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
+	at com.fiap.gs.GsApplication.main(GsApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.5.jar:3.0.5]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'avisoService' defined in file [/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes/com/fiap/gs/service/AvisoService.class]: Failed to instantiate [com.fiap.gs.service.AvisoService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fiap.gs.service.AvisoService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 36 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The final local variable contadora cannot be assigned. It must be blank and not using a compound assignment
+
+	at com.fiap.gs.service.AvisoService.<init>(AvisoService.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:198) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 38 common frames omitted
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-11-21T09:21:58.815-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Starting GsApplication using Java 17.0.9 with PID 30484 (/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes started by leonardkaric in /Users/leonardkaric/eclipse-workspace/digital-gs)
+2023-11-21T09:21:58.816-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : The following 1 profile is active: "prod"
+2023-11-21T09:21:58.915-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T09:21:58.922-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 4 JPA repository interfaces.
+2023-11-21T09:21:58.984-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-21T09:21:58.985-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T09:21:58.985-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-11-21T09:21:58.993-03:00  INFO 30484 --- [  restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-21T09:21:58.993-03:00  INFO 30484 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 173 ms
+2023-11-21T09:21:59.001-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-11-21T09:22:00.626-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection ConnectionID:24 ClientConnectionId: 395a39f7-7dea-49c9-a6f0-b76405c34fea
+2023-11-21T09:22:00.627-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-11-21T09:22:00.628-03:00  INFO 30484 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:sqlserver://sqlserver-vacina-facil.database.windows.net:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;msiTokenCacheTtl=3600;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=sql-vacina-facil;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;'
+2023-11-21T09:22:00.652-03:00  INFO 30484 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T09:22:00.656-03:00  INFO 30484 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2023-11-21T09:22:02.904-03:00  INFO 30484 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T09:22:02.905-03:00  INFO 30484 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:22:02.976-03:00  WARN 30484 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T09:22:03.004-03:00  INFO 30484 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66c7a5f3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68886ed9, org.springframework.security.web.context.SecurityContextHolderFilter@7bf25f55, org.springframework.security.web.header.HeaderWriterFilter@5e0802ff, org.springframework.web.filter.CorsFilter@7af58d27, org.springframework.security.web.authentication.logout.LogoutFilter@1f722674, com.fiap.gs.config.AuthorizationFilter@3b28722f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4efc980c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50fd74d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@571aa8d1, org.springframework.security.web.session.SessionManagementFilter@2a41812c, org.springframework.security.web.access.ExceptionTranslationFilter@1fa553d4, org.springframework.security.web.access.intercept.AuthorizationFilter@e0468c0]
+2023-11-21T09:22:03.022-03:00  WARN 30484 --- [  restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-11-21T09:22:03.022-03:00  INFO 30484 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/h2-console/**']
+2023-11-21T09:22:03.025-03:00  INFO 30484 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-21T09:22:03.029-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-21T09:22:03.031-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Started GsApplication in 4.237 seconds (process running for 558.926)
+2023-11-21T09:22:03.032-03:00  INFO 30484 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-21T09:22:39.842-03:00  INFO 30484 --- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-21T09:22:39.884-03:00  INFO 30484 --- [       Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T09:22:39.894-03:00  INFO 30484 --- [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:22:39.895-03:00  INFO 30484 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-11-21T09:22:39.899-03:00  INFO 30484 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-11-21T09:22:39.975-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Starting GsApplication using Java 17.0.9 with PID 30484 (/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes started by leonardkaric in /Users/leonardkaric/eclipse-workspace/digital-gs)
+2023-11-21T09:22:39.975-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : The following 1 profile is active: "prod"
+2023-11-21T09:22:40.046-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T09:22:40.052-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 4 JPA repository interfaces.
+2023-11-21T09:22:40.091-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-21T09:22:40.091-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T09:22:40.091-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-11-21T09:22:40.098-03:00  INFO 30484 --- [  restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-21T09:22:40.099-03:00  INFO 30484 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 123 ms
+2023-11-21T09:22:40.103-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-11-21T09:22:41.322-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection ConnectionID:34 ClientConnectionId: fba8fa83-2458-4dac-bad9-d8b9aee52f8c
+2023-11-21T09:22:41.323-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-11-21T09:22:41.323-03:00  INFO 30484 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:sqlserver://sqlserver-vacina-facil.database.windows.net:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;msiTokenCacheTtl=3600;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=sql-vacina-facil;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;'
+2023-11-21T09:22:41.344-03:00  INFO 30484 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T09:22:41.348-03:00  INFO 30484 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2023-11-21T09:22:43.602-03:00  INFO 30484 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T09:22:43.603-03:00  INFO 30484 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:22:43.671-03:00  WARN 30484 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T09:22:43.696-03:00  INFO 30484 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@252ab772, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b138301, org.springframework.security.web.context.SecurityContextHolderFilter@459da486, org.springframework.security.web.header.HeaderWriterFilter@7ea1a8d8, org.springframework.web.filter.CorsFilter@77cce46d, org.springframework.security.web.authentication.logout.LogoutFilter@3daa7fa1, com.fiap.gs.config.AuthorizationFilter@6d5b621c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ab2f1c6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39267720, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e81a7c0, org.springframework.security.web.session.SessionManagementFilter@64790901, org.springframework.security.web.access.ExceptionTranslationFilter@6f4c0d8e, org.springframework.security.web.access.intercept.AuthorizationFilter@6ade714d]
+2023-11-21T09:22:43.732-03:00  WARN 30484 --- [  restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-11-21T09:22:43.732-03:00  INFO 30484 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/h2-console/**']
+2023-11-21T09:22:43.740-03:00  INFO 30484 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-21T09:22:43.755-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-21T09:22:43.762-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Started GsApplication in 3.797 seconds (process running for 599.656)
+2023-11-21T09:22:43.764-03:00  INFO 30484 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-21T09:22:48.863-03:00  INFO 30484 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T09:22:48.863-03:00  INFO 30484 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21T09:22:48.869-03:00  INFO 30484 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-11-21T09:22:49.484-03:00  WARN 30484 --- [nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 2627, SQLState: 23000
+2023-11-21T09:22:49.485-03:00 ERROR 30484 --- [nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Violation of UNIQUE KEY constraint 'UK_7yqbn5ov2v6eec3wn622w3evp'. Cannot insert duplicate key in object 'dbo.t_usuario'. The duplicate key value is (leonardkaric@gmail.com).
+2023-11-21T09:22:49.811-03:00  WARN 30484 --- [nio-8080-exec-1] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [com.fiap.gs.exception.RestDuplicatedException: Já existe um usuario com este email ou telefone]
+Quantidade de vezes percorrida6
+2023-11-21T09:24:02.952-03:00  INFO 30484 --- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-21T09:24:02.983-03:00  INFO 30484 --- [      Thread-20] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T09:24:02.987-03:00  INFO 30484 --- [      Thread-20] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-21T09:24:03.014-03:00  INFO 30484 --- [      Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:24:03.019-03:00  INFO 30484 --- [      Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-11-21T09:24:03.022-03:00  INFO 30484 --- [      Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-11-21T09:24:03.106-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Starting GsApplication using Java 17.0.9 with PID 30484 (/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes started by leonardkaric in /Users/leonardkaric/eclipse-workspace/digital-gs)
+2023-11-21T09:24:03.106-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : The following 1 profile is active: "prod"
+2023-11-21T09:24:03.178-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T09:24:03.185-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 4 JPA repository interfaces.
+2023-11-21T09:24:03.232-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-21T09:24:03.233-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T09:24:03.233-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-11-21T09:24:03.240-03:00  INFO 30484 --- [  restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-21T09:24:03.241-03:00  INFO 30484 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 133 ms
+2023-11-21T09:24:03.245-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2023-11-21T09:24:04.812-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection ConnectionID:44 ClientConnectionId: fa594d23-880b-482b-8a13-3f3b78021a43
+2023-11-21T09:24:04.813-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2023-11-21T09:24:04.813-03:00  INFO 30484 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:sqlserver://sqlserver-vacina-facil.database.windows.net:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;msiTokenCacheTtl=3600;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=sql-vacina-facil;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;'
+2023-11-21T09:24:04.835-03:00  INFO 30484 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T09:24:04.838-03:00  INFO 30484 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2023-11-21T09:24:07.804-03:00  INFO 30484 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T09:24:07.807-03:00  INFO 30484 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:24:07.903-03:00  WARN 30484 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T09:24:07.928-03:00  INFO 30484 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6840e9b9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49e7fad2, org.springframework.security.web.context.SecurityContextHolderFilter@458ed066, org.springframework.security.web.header.HeaderWriterFilter@597d1b58, org.springframework.web.filter.CorsFilter@3381e650, org.springframework.security.web.authentication.logout.LogoutFilter@f05c07b, com.fiap.gs.config.AuthorizationFilter@5252cdda, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@388c1884, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@99a7316, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@557a974a, org.springframework.security.web.session.SessionManagementFilter@17b45403, org.springframework.security.web.access.ExceptionTranslationFilter@7f004ffc, org.springframework.security.web.access.intercept.AuthorizationFilter@d4d6a00]
+2023-11-21T09:24:07.945-03:00  WARN 30484 --- [  restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-11-21T09:24:07.945-03:00  INFO 30484 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/h2-console/**']
+2023-11-21T09:24:07.947-03:00  INFO 30484 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-21T09:24:07.950-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-21T09:24:07.952-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Started GsApplication in 4.855 seconds (process running for 683.846)
+2023-11-21T09:24:07.953-03:00  INFO 30484 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-21T09:24:11.678-03:00  INFO 30484 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T09:24:11.679-03:00  INFO 30484 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21T09:24:11.680-03:00  INFO 30484 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Quantidade de vezes percorrida6
+Quantidade de vezes percorrida12
+2023-11-21T09:28:03.317-03:00  WARN 30484 --- [l-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=1m23s92ms).
+2023-11-21T09:29:27.990-03:00  WARN 30484 --- [l-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=1m24s685ms).
+2023-11-21T09:30:33.963-03:00  WARN 30484 --- [l-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=1m5s973ms).
+2023-11-21T09:31:28.311-03:00  WARN 30484 --- [l-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=54s348ms).
+2023-11-21T09:33:39.129-03:00  WARN 30484 --- [l-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=57s378ms).
+2023-11-21T09:37:14.788-03:00  WARN 30484 --- [l-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=1m7s528ms).
+2023-11-21T09:39:29.361-03:00  WARN 30484 --- [l-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=2m14s582ms).
+2023-11-21T09:40:47.041-03:00  WARN 30484 --- [l-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=1m17s682ms).
+2023-11-21T09:42:50.519-03:00  WARN 30484 --- [l-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=52s305ms).
+2023-11-21T09:44:03.200-03:00  WARN 30484 --- [l-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=1m12s680ms).
+2023-11-21T09:46:40.277-03:00  WARN 30484 --- [l-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=1m25s403ms).
+2023-11-21T09:47:25.312-03:00  WARN 30484 --- [l-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=45s39ms).
+2023-11-21T09:54:23.377-03:00  INFO 30484 --- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-21T09:54:23.484-03:00  INFO 30484 --- [      Thread-24] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T09:54:23.492-03:00  INFO 30484 --- [      Thread-24] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-21T09:54:23.600-03:00  INFO 30484 --- [      Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:54:23.654-03:00  INFO 30484 --- [      Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2023-11-21T09:54:23.687-03:00  INFO 30484 --- [      Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-11-21T09:54:23.932-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Starting GsApplication using Java 17.0.9 with PID 30484 (/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes started by leonardkaric in /Users/leonardkaric/eclipse-workspace/digital-gs)
+2023-11-21T09:54:23.932-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : The following 1 profile is active: "prod"
+2023-11-21T09:54:24.135-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T09:54:24.158-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+2023-11-21T09:54:24.265-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-21T09:54:24.266-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T09:54:24.266-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-11-21T09:54:24.278-03:00  INFO 30484 --- [  restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-21T09:54:24.278-03:00  INFO 30484 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 344 ms
+2023-11-21T09:54:24.283-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2023-11-21T09:54:25.563-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection ConnectionID:54 ClientConnectionId: 9fa13c59-3265-4609-b5cc-834db89abed2
+2023-11-21T09:54:25.564-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2023-11-21T09:54:25.564-03:00  INFO 30484 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:sqlserver://sqlserver-vacina-facil.database.windows.net:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;msiTokenCacheTtl=3600;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=sql-vacina-facil;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;'
+2023-11-21T09:54:25.587-03:00  INFO 30484 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T09:54:25.593-03:00  INFO 30484 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2023-11-21T09:54:27.583-03:00  INFO 30484 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T09:54:27.584-03:00  INFO 30484 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:54:27.669-03:00  WARN 30484 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T09:54:27.695-03:00  INFO 30484 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6d7eb670, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2732cb19, org.springframework.security.web.context.SecurityContextHolderFilter@497b517f, org.springframework.security.web.header.HeaderWriterFilter@1a02f2b6, org.springframework.web.filter.CorsFilter@1ea408a4, org.springframework.security.web.authentication.logout.LogoutFilter@75b7e620, com.fiap.gs.config.AuthorizationFilter@f1467ad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29b2421f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@242882dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35153494, org.springframework.security.web.session.SessionManagementFilter@492173ff, org.springframework.security.web.access.ExceptionTranslationFilter@76b2d37c, org.springframework.security.web.access.intercept.AuthorizationFilter@2ef0ad41]
+2023-11-21T09:54:27.711-03:00  WARN 30484 --- [  restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-11-21T09:54:27.712-03:00  INFO 30484 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/h2-console/**']
+2023-11-21T09:54:27.714-03:00  INFO 30484 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-21T09:54:27.717-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-21T09:54:27.720-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Started GsApplication in 3.809 seconds (process running for 1913.546)
+2023-11-21T09:54:27.720-03:00  INFO 30484 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-21T09:54:36.221-03:00  INFO 30484 --- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-21T09:54:36.230-03:00  INFO 30484 --- [      Thread-28] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T09:54:36.252-03:00  INFO 30484 --- [      Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:54:36.257-03:00  INFO 30484 --- [      Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2023-11-21T09:54:36.267-03:00  INFO 30484 --- [      Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-11-21T09:54:36.353-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Starting GsApplication using Java 17.0.9 with PID 30484 (/Users/leonardkaric/eclipse-workspace/digital-gs/target/classes started by leonardkaric in /Users/leonardkaric/eclipse-workspace/digital-gs)
+2023-11-21T09:54:36.353-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : The following 1 profile is active: "prod"
+2023-11-21T09:54:36.421-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T09:54:36.427-03:00  INFO 30484 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 4 JPA repository interfaces.
+2023-11-21T09:54:36.466-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-21T09:54:36.466-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T09:54:36.466-03:00  INFO 30484 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-11-21T09:54:36.473-03:00  INFO 30484 --- [  restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-21T09:54:36.473-03:00  INFO 30484 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 120 ms
+2023-11-21T09:54:36.477-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2023-11-21T09:54:37.258-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection ConnectionID:64 ClientConnectionId: db93ebbd-9fa2-4d96-94e0-f94241499415
+2023-11-21T09:54:37.258-03:00  INFO 30484 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2023-11-21T09:54:37.259-03:00  INFO 30484 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:sqlserver://sqlserver-vacina-facil.database.windows.net:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;msiTokenCacheTtl=3600;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=sql-vacina-facil;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;'
+2023-11-21T09:54:37.280-03:00  INFO 30484 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T09:54:37.284-03:00  INFO 30484 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2023-11-21T09:54:39.325-03:00  INFO 30484 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T09:54:39.326-03:00  INFO 30484 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T09:54:39.387-03:00  WARN 30484 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T09:54:39.411-03:00  INFO 30484 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15eef1f3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33e9f98d, org.springframework.security.web.context.SecurityContextHolderFilter@245d3383, org.springframework.security.web.header.HeaderWriterFilter@2458a70f, org.springframework.web.filter.CorsFilter@32e54382, org.springframework.security.web.authentication.logout.LogoutFilter@757a7b78, com.fiap.gs.config.AuthorizationFilter@11e831, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b344c98, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a35ea2e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@396b6c8d, org.springframework.security.web.session.SessionManagementFilter@3c15c89e, org.springframework.security.web.access.ExceptionTranslationFilter@232985fd, org.springframework.security.web.access.intercept.AuthorizationFilter@192254ff]
+2023-11-21T09:54:39.431-03:00  WARN 30484 --- [  restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-11-21T09:54:39.431-03:00  INFO 30484 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/h2-console/**']
+2023-11-21T09:54:39.434-03:00  INFO 30484 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-21T09:54:39.438-03:00  INFO 30484 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-21T09:54:39.439-03:00  INFO 30484 --- [  restartedMain] com.fiap.gs.GsApplication                : Started GsApplication in 3.096 seconds (process running for 1925.266)
+2023-11-21T09:54:39.440-03:00  INFO 30484 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-21T09:55:29.121-03:00  INFO 30484 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T09:55:29.123-03:00  INFO 30484 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21T09:55:29.138-03:00  INFO 30484 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2023-11-21T09:58:39.002-03:00  WARN 30484 --- [l-9 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Thread starvation or clock leap detected (housekeeper delta=2m1s616ms).
