@@ -30,11 +30,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @Setter
 @AllArgsConstructor
-@Table(name = "GS_TB_USUARIO")
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+@Table(name = "T_USUARIO")
 public class Usuario implements UserDetails {
 
-	private static final long serialVersionUID = 1L;
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

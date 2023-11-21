@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-@Table(name = "GS_TB_DEPENDENTE")
+@Table(name = "T_DEPENDENTES")
 public class Dependente {
 	
 	@Id
@@ -42,7 +42,7 @@ public class Dependente {
     private String nome;
     
     @NotNull
-    @Column(name = "dtnascimento")
+    @Column(name = "data_nascimento")
     private Date dataNascimento;
 
 	public Integer getId() {

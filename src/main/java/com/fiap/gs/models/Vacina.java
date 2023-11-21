@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @AllArgsConstructor
-@Table(name = "GS_TB_VACINA")
+@Table(name = "T_VACINA")
 public class Vacina {
 	
 	
