@@ -2,11 +2,16 @@ package com.fiap.gs.models;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -19,6 +24,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @AllArgsConstructor
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+@Table(name = "GS_TB_DEPENDENTE")
 public class Dependente {
 	
 	@Id
@@ -26,6 +33,7 @@ public class Dependente {
 	private Integer id;
 	
 	@ManyToOne
+    @JsonIdentityReference(alwaysAsId = true)
 	private Usuario usuario;
 	
     @Size(min = 1, max = 100, message = "Nome do dependente deve possuír entre 1 e 100 caractéres!")

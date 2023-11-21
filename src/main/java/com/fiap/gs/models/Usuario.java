@@ -2,6 +2,10 @@ package com.fiap.gs.models;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -12,6 +16,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
@@ -25,33 +30,34 @@ import lombok.Setter;
 @NoArgsConstructor
 @Setter
 @AllArgsConstructor
+@Table(name = "GS_TB_USUARIO")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Usuario implements UserDetails {
 
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	 private Integer id;
-     
+	private Integer id;
+
 	@NotEmpty
-    @Size(min = 3, max = 100)
-     private String nome;
-    
-    @NotEmpty
-    @Email
-    @Column(unique=true)
-     private String email;
-     
-    @NotEmpty
-     private String senha;
-     
-    @NotEmpty 
-    @Size(min = 7, max = 15)
-     private String telefone;
-    
-    @Enumerated(EnumType.STRING)
-    private SituacaoUsuario situacao;
-    
-    
+	@Size(min = 3, max = 100)
+	private String nome;
+
+	@NotEmpty
+	@Email
+	@Column(unique = true)
+	private String email;
+
+	@NotEmpty
+	private String senha;
+
+	@NotEmpty
+	@Size(min = 7, max = 15)
+	private String telefone;
+
+	@Enumerated(EnumType.STRING)
+	private SituacaoUsuario situacao;
 
 	public Integer getId() {
 		return id;
@@ -101,42 +107,39 @@ public class Usuario implements UserDetails {
 		this.situacao = situacao;
 	}
 
-
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		 return List.of();
+		return List.of();
 	}
 
-    @Override
-    public String getPassword() {
-        return this.senha;
-    }
+	@Override
+	public String getPassword() {
+		return this.senha;
+	}
 
-    @Override
-    public String getUsername() {
-        return this.email;
-    }
-	
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
+	@Override
+	public String getUsername() {
+		return this.email;
+	}
 
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
+	@Override
+	public boolean isAccountNonExpired() {
+		return true;
+	}
 
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
+	@Override
+	public boolean isAccountNonLocked() {
+		return true;
+	}
 
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
-    
-    
+	@Override
+	public boolean isCredentialsNonExpired() {
+		return true;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		return true;
+	}
 
 }
